@@ -1,0 +1,15 @@
+# Dependencies
+node_modules
+
+# Built files
+built
+
+public
+
+# yarn error logs
+yarn-error.log
+
+# Code coverage
+coverage
+
+req
