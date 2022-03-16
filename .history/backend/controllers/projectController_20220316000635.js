@@ -46,8 +46,7 @@ const createProject = asyncHandler(async (req, res) => {
     const {name,description}=req.body
   const project = new Project({
       name: name,
-    description: description,
-    user:req.user._id
+      description: description,
   })
 
   const createdProject = await project.save()

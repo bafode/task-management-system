@@ -7,7 +7,7 @@ import Message from '../components/Message'
 import Loader from '../components/Loader'
 import FormContainer from '../components/FormContainer'
 import { createTask } from '../actions/taskActions'
-import { TASK_CREATE_RESET, TASK_CREATE_SUCCESS} from '../constants/taskConstants'
+import { TASK_CREATE_RESET} from '../constants/taskConstants'
 
 const TaskCreateScreen = ({ history }) => {
 
@@ -26,7 +26,7 @@ const TaskCreateScreen = ({ history }) => {
 
   useEffect(() => {
     if (success) {
-      dispatch({ type: TASK_CREATE_SUCCESS })
+      dispatch({ type: TASK_CREATE_RESET })
        history.push('/admin/tasklist')
     } 
   }, [dispatch,history])

@@ -22,10 +22,9 @@ const ProductCreateScreen = ({history }) => {
     
 
   useEffect(() => {
-     if (success) {
-      dispatch({ type: PROJECT_CREATE_SUCCESS })
-           history.push('/')
-    } 
+    if (success) {
+      history.push('/')
+    }
   }, [history])
 
   const submitHandler = (e) => {

@@ -14,7 +14,7 @@ const getProjects = asyncHandler(async (req, res) => {
 // @route   GET /api/projects/:id
 // @access  Public
 const getProjectById = asyncHandler(async (req, res) => {
-  const project = await Project.findById(req.params.id).populate('user')
+  const project = await Project.findById(req.params.id)
 
   if (project) {
     res.status(200).json(project)
@@ -46,8 +46,7 @@ const createProject = asyncHandler(async (req, res) => {
     const {name,description}=req.body
   const project = new Project({
       name: name,
-    description: description,
-    user:req.user._id
+      description: description,
   })
 
   const createdProject = await project.save()
